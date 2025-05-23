@@ -1,0 +1,13 @@
+# Target labels
+ glm_external
+# Source files and their labels
+/Users/jakemorgan/Documents/temp/test/thirdparty/glm/CMakeFiles/glm_external
+/Users/jakemorgan/Documents/temp/test/thirdparty/glm/CMakeFiles/glm_external.rule
+/Users/jakemorgan/Documents/temp/test/thirdparty/glm/CMakeFiles/glm_external-complete.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/glm_external/glm_external-build.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/glm_external/glm_external-configure.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/glm_external/glm_external-download.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/glm_external/glm_external-install.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/glm_external/glm_external-mkdir.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/glm_external/glm_external-patch.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/glm_external/glm_external-update.rule

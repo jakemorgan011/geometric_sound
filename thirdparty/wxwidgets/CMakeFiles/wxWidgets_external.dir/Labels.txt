@@ -1,0 +1,13 @@
+# Target labels
+ wxWidgets_external
+# Source files and their labels
+/Users/jakemorgan/Documents/temp/test/thirdparty/wxwidgets/CMakeFiles/wxWidgets_external
+/Users/jakemorgan/Documents/temp/test/thirdparty/wxwidgets/CMakeFiles/wxWidgets_external.rule
+/Users/jakemorgan/Documents/temp/test/thirdparty/wxwidgets/CMakeFiles/wxWidgets_external-complete.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/wxWidgets_external/wxWidgets_external-build.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/wxWidgets_external/wxWidgets_external-configure.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/wxWidgets_external/wxWidgets_external-download.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/wxWidgets_external/wxWidgets_external-install.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/wxWidgets_external/wxWidgets_external-mkdir.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/wxWidgets_external/wxWidgets_external-patch.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/wxWidgets_external/wxWidgets_external-update.rule

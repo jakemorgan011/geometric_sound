@@ -1,0 +1,13 @@
+# Target labels
+ GLEW_external
+# Source files and their labels
+/Users/jakemorgan/Documents/temp/test/thirdparty/glew/CMakeFiles/GLEW_external
+/Users/jakemorgan/Documents/temp/test/thirdparty/glew/CMakeFiles/GLEW_external.rule
+/Users/jakemorgan/Documents/temp/test/thirdparty/glew/CMakeFiles/GLEW_external-complete.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/GLEW_external/GLEW_external-build.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/GLEW_external/GLEW_external-configure.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/GLEW_external/GLEW_external-download.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/GLEW_external/GLEW_external-install.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/GLEW_external/GLEW_external-mkdir.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/GLEW_external/GLEW_external-patch.rule
+/Users/jakemorgan/Documents/temp/test/subprojects/Stamp/GLEW_external/GLEW_external-update.rule
