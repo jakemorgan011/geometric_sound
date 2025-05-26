@@ -89,6 +89,7 @@ bool MyApp::OnInit()
   MyFrame *frame = new MyFrame("pyramid");
   frame->Show(true);
   test.setSample("/Users/jakemorgan/Documents/xSamples/kirbs/Wave0.wav");
+  std::cout << "message from oninit! \nwx configuration set defaults to default and jake isn't sure how to change that... \nuse COUT to debug!!!!" << std::endl;
   // probably need to initialize all the audio processing stuff here at some point
   return true;
 }

@@ -1,46 +1,26 @@
 # check if wxWidgets is already installed in the system - using CMake's built in script FindwxWidgets
-find_package(wxWidgets QUIET)
+# probably gonna have to do local install cause this shit is breaking non stop.
+set(wxWidgets_CONFIGURATION "Debug")
 
+find_package(wxWidgets QUIET)
 if(wxWidgets_FOUND)
     message(STATUS "Found preinstalled wxWidgets libraries at ${wxWidgets_LIBRARIES}")
     add_library(wxWidgets_external INTERFACE)
 else()
-    message(STATUS "Preinstalled wxWidgets not found.")
-    message(STATUS "Will download and install wxWidgets in ${STAGED_INSTALL_PREFIX}")
-
-    include(ExternalProject)
-    ExternalProject_Add(wxWidgets_external
-        GIT_REPOSITORY
-        https://github.com/wxWidgets/wxWidgets.git
-        GIT_TAG
-        master
-        GIT_SHALLOW
-        1
-        UPDATE_COMMAND
-        ""
-        CMAKE_ARGS
-        -DCMAKE_INSTALL_PREFIX=${STAGED_INSTALL_PREFIX}
-        -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
-
-        -DwxBUILD_SHARED=OFF
-
-        TEST_AFTER_INSTALL
-        0
-        DOWNLOAD_NO_PROGRESS
-        1
-        LOG_CONFIGURE
-        1
-        LOG_BUILD
-        1
-        LOG_INSTALL
-        1
-    )
-
-    set(wxWidgets_ROOT_DIR ${STAGED_INSTALL_PREFIX})
-    file(TO_NATIVE_PATH "${wxWidgets_ROOT_DIR}" wxWidgets_ROOT_DIR)
-    set(wxWidgets_ROOT_DIR ${wxWidgets_ROOT_DIR} CACHE INTERNAL "wxWidgets installation dir")
-
-    set(ENV_WX_CONFIG ${STAGED_INSTALL_PREFIX}/bin/wx-config)
-    file(TO_NATIVE_PATH "${ENV_WX_CONFIG}" ENV_WX_CONFIG)
-    set(ENV_WX_CONFIG ${ENV_WX_CONFIG} CACHE INTERNAL "wx-config dir")
+  # doing local install because external project is breaking.
+  set(wxWidgets_ROOT_DIR "/opt/homebrew/opt/wxwidgets")
+  find_package(wxWidgets COMPONENTS core base gl REQUIRED)
+  include(${wxWidgets_USE_FILE})
+  if(wxWidgets_USE_DEBUG)
+    add_definitions(-D__WXDEBUG__)
+    message(STATUS "Using DEBUG wxWidgets build")
+  endif()
+  if(NOT wxWidgets_USE_DEBUG)
+    message(FATAL_ERROR "wxWidgets debug libraries not found!")
+  endif()
+  add_library(wxWidgets INTERFACE)
+  
+  set(ENV_WX_CONFIG ${STAGED_INSTALL_PREFIX}/bin/wx-config)
+  file(TO_NATIVE_PATH "${ENV_WX_CONFIG}" ENV_WX_CONFIG)
+  set(ENV_WX_CONFIG ${ENV_WX_CONFIG} CACHE INTERNAL "wx-config dir")
 endif()

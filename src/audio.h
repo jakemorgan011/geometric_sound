@@ -19,15 +19,15 @@ public:
     file = sf_open(path, SFM_READ, &info);
     if (!file)
     {
-      wxLogDebug("error reading sample... ensure sample is contains .wav extension.");
+      std::cout << "error reading file at:" << path << std::endl;
     }
     if (file)
     {
-      wxLogDebug(".wav sample has been read successfully.");
+      std::cout << ".wav file set successfully" << std::endl;
       // info should contain all encoded wav data.
       auto check = sf_format_check(&info);
-      wxLogDebug("1 for successful format, 0 for unsuccessful format.");
-      wxLogDebug("format result: %d", check);
+      std::cout << "1 for successful format, 0 for unsuccessful format." << std::endl;
+      std::cout << "format result: " << check << std::endl;;
     }
   }
 

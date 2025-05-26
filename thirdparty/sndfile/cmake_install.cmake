@@ -1,4 +1,4 @@
-# Install script for directory: /Users/jakemorgan/Documents/temp/test/thirdparty
+# Install script for directory: /Users/jakemorgan/Documents/temp/test/thirdparty/sndfile
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,15 +35,5 @@ endif()
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/Users/jakemorgan/Documents/temp/test/thirdparty/wxwidgets/cmake_install.cmake")
-  include("/Users/jakemorgan/Documents/temp/test/thirdparty/glew/cmake_install.cmake")
-  include("/Users/jakemorgan/Documents/temp/test/thirdparty/glm/cmake_install.cmake")
-  include("/Users/jakemorgan/Documents/temp/test/thirdparty/sndfile/cmake_install.cmake")
-  include("/Users/jakemorgan/Documents/temp/test/thirdparty/rtaudio/cmake_install.cmake")
-
 endif()
 
