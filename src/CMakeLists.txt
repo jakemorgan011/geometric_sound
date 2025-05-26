@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.6 FATAL_ERROR)
 
 project(wx_gl_cube_tutorial_core LANGUAGES CXX)
 
+set(CMAKE_OSX_ARCHITECTURES "arm64" CACHE INTERNAL "")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -13,6 +14,8 @@ endif()
 set(wxWidgets_USE_STATIC 1)
 
 find_package(wxWidgets COMPONENTS core base gl REQUIRED)
+message(STATUS "wxwidgets library: ${wxWidgets_LIRARIES}")
+message(STATUS "wxWidgets lib dir: ${wxWidgets_LIB_DIR}")
 
 message(STATUS "GLEW_DIR is... ${GLEW_DIR}")
 
@@ -39,5 +42,5 @@ else()
     # so it works on all platforms
     add_executable(main WIN32 ${SRCS} main.exe.manifest)
 endif()
-
-target_link_libraries(main PRIVATE ${wxWidgets_LIBRARIES} GLEW::glew_s SndFile::sndfile)
+# GLEW::glew_S
+target_link_libraries(main PRIVATE ${wxWidgets_LIBRARIES} SndFile::sndfile)
